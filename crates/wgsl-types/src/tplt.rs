@@ -209,6 +209,10 @@ impl PtrTemplate {
                     (AddressSpace::PushConstant, _) => {
                         todo!("push_constant")
                     }
+                    #[cfg(feature = "naga-ext")]
+                    (AddressSpace::Immediate, _) => {
+                        todo!("push_constant")
+                    }
                 };
                 Ok(PtrTemplate { space, ty, access })
             }

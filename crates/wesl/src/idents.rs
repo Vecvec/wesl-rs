@@ -136,6 +136,8 @@ impl BuiltinIdent for AddressSpace {
             Self::Handle => None,
             #[cfg(feature = "naga-ext")]
             Self::PushConstant => builtin_ident("push_constant"),
+            #[cfg(feature = "naga-ext")]
+            Self::Immediate => builtin_ident("push_constant"),
         }
     }
 }
